@@ -1,0 +1,885 @@
+@import "reset.css";
+@import "font.css";
+
+body {
+    scroll-behavior: smooth;    
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 999;
+}
+
+.header.active {
+    background-color: #282828;    
+}
+
+header > .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 50px;
+    margin: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    color: white;
+    font-family: 'intelone-mono-font-family-regular';
+}
+
+header > .content > ul {
+    display: flex;
+}
+
+header > .content > ul:first-child {
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+header > .content > .link > li {
+    margin-right: 20px;
+    padding: 10px;
+}
+
+header > .content .git a i {
+    font-size: 30px;
+    color: white;
+}
+
+header > .content > ul > li {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+header > .content > ul i {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+header .content ul li:hover,
+header > .content > ul i:hover {
+    color: white;
+    opacity: 1;
+}
+
+.top_poto {
+    width: 100%;
+    height: 100vh;
+    
+    position: relative;
+    top: 0;
+    left: 0;   
+
+    z-index: -999;
+}
+
+.bgc {
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+
+    position: absolute;
+    top: 0;
+    left: 0; 
+
+    z-index: -998;
+    opacity: 0.5;
+}
+
+:root {
+    --ti-cursor-margin-left: 0.1em;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'KOTRAHOPE';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titleName {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+
+    font-family: 'establishRetrosansOTF';
+}
+
+/* ======================== ABOUT ME ======================== */
+
+.aboutme_bg {
+    background-color: white;
+    padding: 100px 0;
+}
+
+.aboutme_bg .about_me {
+    width: 1200px;
+    margin: auto;    
+}
+
+.aboutme_bg .about_me ul {
+    display: flex;
+
+    width: 1000px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-right: 0;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'KyoboHandwriting2021sjy';
+}
+
+.aboutme_bg .about_me ul li {
+    display: flex;
+    align-items: center;
+    width: 333px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.aboutme_bg .about_me ul li:last-child {
+    width: 550px;
+}
+
+.aboutme_bg .about_me ul li div i {
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.aboutme_bg .about_me ul li div:nth-child(2) div:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+/* ======================== SKILLS ======================== */
+
+.skills_bg {
+    background-color: antiquewhite;
+    padding: 100px 0;
+}
+
+.skills_bg .skills {
+    width: 1200px;
+    margin: auto;
+}
+
+.skills_bg .skills > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+}
+
+.skills_bg .skills .skills_logo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills_bg .skills .skills_logo div {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px 10px gray;
+}
+
+.skills_bg .skills .skills_logo div img {
+    width: 150px;
+    height: 150px;
+}
+
+/* ======================== PROJECT ======================== */
+
+.hidden {
+    display: none;
+}
+
+.project_bg {
+    background-color: rgb(236, 216, 255);
+    padding: 100px 0;
+}
+
+.project .card {
+    box-shadow: 1px 1px 10px 5px gray;
+}
+
+.project .nexon {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.project .nexon .thumbnail {
+    cursor: pointer;
+    z-index: 2;
+}
+
+.project .nexon .thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.project .nexon .card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+.project .nexon .back {
+    background-color: white;
+
+    z-index: 1;
+    transform: rotateY(-230deg);
+}
+
+.project .nexon .thumbnail .앞배경 {
+    background-color: black;
+    width: 400px;
+    height: 300px;
+    color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0.5;
+}
+
+.project .nexon .thumbnail .앞배경 .타이틀 {
+    width: 300px;
+    height: 200px;
+    border: 2px solid white;
+    font-size: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project .nexon .thumbnail .앞배경 .타이틀 div:last-child {
+    margin-top: 20px;
+    color: aquamarine;
+}
+
+.nexon .back .back_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 300px;
+    cursor: pointer;
+    
+    font-family: 'KOTRAHOPE';
+}
+
+.nexon .back .back_area .back_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color:#28A0FF;
+}
+
+.nexon .back .back_area .back_title i {
+    color: #aaaaaa;    
+}
+
+.nexon .back .back_area .back_title i:hover {
+    color: #282828;    
+}
+
+.nexon .back .back_area .back_bundle {
+    font-style: oblique;
+    transition: 0.3s;
+}
+
+.nexon .back .back_area .back_bundle div:last-child {
+    font-style: normal;
+    font-size: 15px;
+    font-family: 'Dovemayo_wild';
+}
+
+.nexon .back .back_area .back_bundle .back_item {
+    color: #FFA500;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nexon .back .back_area .back_a {
+    all: unset;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nexon .back .back_area .back_a a {
+    padding: 5px 10px;
+    color: white;
+    background-color: #C8D7FF;
+    border-radius: 50px;
+}
+
+.nexon .back .back_area .back_a a:hover {
+    color: #28A0FF;
+    background-color: #AAB9FF;
+    transition: 0.3s;
+}
+
+/* ======================== PROJECT:ChromApp ======================== */
+
+.project .chromApp {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.project .chromApp .thumbnail {
+    cursor: pointer;
+    z-index: 2;
+}
+
+.project .chromApp .thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.project .chromApp .card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+.project .chromApp .back {
+    background-color: white;
+
+    z-index: 1;
+    transform: rotateY(-230deg);
+}
+
+.project .chromApp .thumbnail .앞배경 {
+    background-color: black;
+    width: 400px;
+    height: 300px;
+    color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0.5;
+}
+
+.project .chromApp .thumbnail .앞배경 .타이틀 {
+    width: 300px;
+    height: 200px;
+    border: 2px solid white;
+    font-size: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project .chromApp .thumbnail .앞배경 .타이틀 div:last-child {
+    margin-top: 20px;
+    color: aquamarine;
+}
+
+.chromApp .back .back_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 300px;
+    cursor: pointer;
+    
+    font-family: 'KOTRAHOPE';
+}
+
+.chromApp .back .back_area .back_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color:#28A0FF;
+}
+
+.chromApp .back .back_area .back_title i {
+    color: #aaaaaa;    
+}
+
+.chromApp .back .back_area .back_title i:hover {
+    color: #282828;    
+}
+
+.chromApp .back .back_area .back_bundle {
+    font-style: oblique;
+    transition: 0.3s;
+}
+
+.chromApp .back .back_area .back_bundle div:last-child {
+    font-style: normal;
+    font-size: 15px;
+    font-family: 'Dovemayo_wild';
+}
+
+.chromApp .back .back_area .back_bundle .back_item {
+    color: #FFA500;
+}
+
+.chromApp .back .back_area .back_a {
+    all: unset;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.chromApp .back .back_area .back_a a {
+    padding: 5px 10px;
+    color: white;
+    background-color: #C8D7FF;
+    border-radius: 50px;
+}
+
+.chromApp .back .back_area .back_a a:hover {
+    color: #28A0FF;
+    background-color: #AAB9FF;
+    transition: 0.3s;
+}
+
+/* ======================== PROJECT:Painting ======================== */
+
+.project .Painting {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.project .Painting .thumbnail {
+    cursor: pointer;
+    z-index: 2;
+}
+
+.project .Painting .thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.project .Painting .card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+.project .Painting .back {
+    background-color: white;
+
+    z-index: 1;
+    transform: rotateY(-230deg);
+}
+
+.project .Painting .thumbnail .앞배경 {
+    background-color: black;
+    width: 400px;
+    height: 300px;
+    color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0.5;
+}
+
+.project .Painting .thumbnail .앞배경 .타이틀 {
+    width: 300px;
+    height: 200px;
+    border: 2px solid white;
+    font-size: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project .Painting .thumbnail .앞배경 .타이틀 div:last-child {
+    margin-top: 20px;
+    color: aquamarine;
+}
+
+.Painting .back .back_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 300px;
+    cursor: pointer;
+    
+    font-family: 'KOTRAHOPE';
+}
+
+.Painting .back .back_area .back_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color:#28A0FF;
+}
+
+.Painting .back .back_area .back_title i {
+    color: #aaaaaa;    
+}
+
+.Painting .back .back_area .back_title i:hover {
+    color: #282828;    
+}
+
+.Painting .back .back_area .back_bundle {
+    font-style: oblique;
+    transition: 0.3s;
+}
+
+.Painting .back .back_area .back_bundle div:last-child {
+    font-style: normal;
+    font-size: 15px;
+    font-family: 'Dovemayo_wild';
+}
+
+.Painting .back .back_area .back_bundle .back_item {
+    color: #FFA500;
+}
+
+.Painting .back .back_area .back_a {
+    all: unset;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Painting .back .back_area .back_a a {
+    padding: 5px 10px;
+    color: white;
+    background-color: #C8D7FF;
+    border-radius: 50px;
+}
+
+.Painting .back .back_area .back_a a:hover {
+    color: #28A0FF;
+    background-color: #AAB9FF;
+    transition: 0.3s;
+}
+
+/* ======================== PROJECT:PORTFOLIO ======================== */
+
+.project .pofol {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.project .pofol .thumbnail {
+    cursor: pointer;
+    z-index: 2;
+}
+
+.project .pofol .thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.project .pofol .card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+.project .pofol .back {
+    background-color: white;
+
+    z-index: 1;
+    transform: rotateY(-230deg);
+}
+
+.project .pofol .thumbnail .앞배경 {
+    background-color: black;
+    width: 400px;
+    height: 300px;
+    color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0.5;
+}
+
+.project .pofol .thumbnail .앞배경 .타이틀 {
+    width: 300px;
+    height: 200px;
+    border: 2px solid white;
+    font-size: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project .pofol .thumbnail .앞배경 .타이틀 div:last-child {
+    margin-top: 20px;
+    color: aquamarine;
+}
+
+.pofol .back .back_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 300px;
+    cursor: pointer;
+    
+    font-family: 'KOTRAHOPE';
+}
+
+.pofol .back .back_area .back_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color:#28A0FF;
+}
+
+.pofol .back .back_area .back_title i {
+    color: #aaaaaa;    
+}
+
+.pofol .back .back_area .back_title i:hover {
+    color: #282828;    
+}
+
+.pofol .back .back_area .back_bundle {
+    font-style: oblique;
+    transition: 0.3s;
+}
+
+.pofol .back .back_area .back_bundle div:last-child {
+    font-style: normal;
+    font-size: 15px;
+    font-family: 'Dovemayo_wild';
+}
+
+.pofol .back .back_area .back_bundle .back_item {
+    color: #FFA500;
+}
+
+.pofol .back .back_area .back_a {
+    all: unset;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pofol .back .back_area .back_a a {
+    padding: 5px 10px;
+    color: white;
+    background-color: #C8D7FF;
+    border-radius: 50px;
+}
+
+.pofol .back .back_area .back_a a:hover {
+    color: #28A0FF;
+    background-color: #AAB9FF;
+    transition: 0.3s;
+}
+
+.project_bg .project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 1200px;
+    margin: auto;
+}
+
+.project_bg .project .pj_file {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+}
+
+.project_bg .project .nexon,
+.project_bg .project .chromApp,
+.project_bg .project .Painting,
+.project_bg .project .pofol {
+    margin: 10px;
+}
+
+.ham {
+    display: none;
+    color: white;
+    font-size: 25px;
+    opacity: 0.7;
+    
+    position: absolute;
+    top: 13px;
+    right: 20px;
+}
+
+.ham:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1150px){    
+    .header.height {
+        height: 250px;
+        background-color: #282828;
+    }
+    .header .content {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 900px;
+    }
+
+    .header .content ul .hometitle {
+        margin-top: 15px;
+    }
+    
+    .header .content .link {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .header .content .link li {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .header .content .git {
+        justify-content: center;
+        width: 100%;
+        display: none;
+        padding: 10px 0;
+    }
+    .header .content .ham {
+        display: flex;
+    }
+    .header .content .link.active,
+    .header .content .git.active {
+        display: flex;
+    }
+    .aboutme_bg .about_me ul {
+        width:530px;
+        margin: auto;
+    }
+    .aboutme_bg .about_me ul li:not(:last-child) {
+        width: 260px;
+    }
+    .skills_bg .skills .skills_logo {
+        display: flex;
+        justify-content: center;
+    }
+    .skills_bg .skills .skills_logo div img {
+        width: 110px;
+        height: 110px;
+    }
+    .aboutme_bg .about_me,
+    .project_bg .project,
+    .skills_bg .skills {
+        width: 600px;
+    }
+    .project_bg .project .pj_file {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .header .content {
+        width: 600px;
+    }
+}
