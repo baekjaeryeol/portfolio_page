@@ -11,7 +11,7 @@ ham.addEventListener("click", () => {
 })
 
 new TypeIt('#title', {
-    strings: ["안녕하세요", "신입 FRONTEND 지원자 백재렬 입니다"],
+    strings: ["안녕하세요", "신입 퍼블리셔 지원자 백재렬 입니다"],
     waitUntilVisible: true
 }).go();
 

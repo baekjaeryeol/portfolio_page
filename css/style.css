@@ -185,15 +185,6 @@ header > .content > ul i:hover {
     margin: auto;
 }
 
-.skills_bg .skills > div:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    margin-bottom: 50px;
-
-    font-family: 'Cafe24Supermagic-Bold-v1.0';
-}
-
 .skills_bg .skills .skills_logo {
     display: flex;
     justify-content: space-evenly;
